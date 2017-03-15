@@ -1,5 +1,7 @@
 # Arma III
 
+Forked from https://bitbucket.org/idahlke/docker-arma3
+
 ## How to use this image?
 
 To build:

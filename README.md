@@ -14,13 +14,9 @@ docker run -it \
 	idahlke/arma3:latest
 ```
 
-## Sample `credentials` file
-This file supplies your steam login credentials to docker at image build time. It is removed from the image before completion of the build.
+## Auth
 
-```
-echo "STEAM_USERNAME=your_steam_username; \
-	STEAM_PASSWORD=your_steam_password;"
-```
+Pass STEAM_USERNAME, STEAM_PASSWORD and STEAM_AUTHCODE to build process as env args.
 
 ## Sample `params` file
 This file contains arma3 server launch params. It is provided at runtime.

@@ -19,12 +19,13 @@ ENV VALIDATE=1
 
 EXPOSE 2302/udp 2303/udp 2304/udp 2305/udp
 
-COPY credentials.sh /
 COPY installserver.sh /
 
-RUN /installserver.sh \
-	&& rm -f /credentials.sh \
-	&& rm -f /installserver.sh
+ARG STEAM_AUTHCODE
+ARG STEAM_USERNAME
+ARG STEAM_PASSWORD
+
+RUN /installserver.sh && rm -f /installserver.sh
 
 WORKDIR /arma3
 

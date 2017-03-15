@@ -1,0 +1,20 @@
+version: '2'
+
+services:
+    arma3:
+        restart: always
+        build:
+            context: .
+            args:
+                - STEAM_USERNAME
+                - STEAM_PASSWORD
+                - STEAM_AUTHCODE
+        volumes:
+            - ./cfg/keys:/arma3/keys:ro
+            - ./cfg/mods:/arma3/mods:ro
+            - ./cfg/mpmissions:/arma3/mpmissions
+            - ./cfg/server:/server:ro
+            - ./cfg/params:/arma3/params:ro
+            - ./cfg/profiles:/arma3/profiles:ro
+        ports:
+            - 2302-2305:2302-2305/udp

@@ -2,21 +2,13 @@
 
 ## How to use this image?
 
+To build:
+
 ```bash
-docker run -it \
-	-v $PWD/keys:/arma3/keys \
-	-v $PWD/mods:/arma3/mods \
-	-v $PWD/mpmissions:/arma3/mpmissions \
-	-v $PWD/server:/server \
-	-v $PWD/params:/arma3/params \
-	-v $PWD/profiles:/profiles \
-	-p 2302-2305:2302-2305/udp \
-	idahlke/arma3:latest
+$ ./build.sh
 ```
 
-## Auth
-
-Pass STEAM_USERNAME, STEAM_PASSWORD and STEAM_AUTHCODE to build process as env args.
+Start and stop with docker-compose.
 
 ## Sample `params` file
 This file contains arma3 server launch params. It is provided at runtime.

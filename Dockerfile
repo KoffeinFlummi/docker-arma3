@@ -15,12 +15,11 @@ RUN echo 233780 > steam_appid.txt
 VOLUME /profiles
 VOLUME /server
 
-ENV VALIDATE=1
-
 EXPOSE 2302/udp 2303/udp 2304/udp 2305/udp
 
 COPY installserver.sh /
 
+ARG BRANCH
 ARG STEAM_AUTHCODE
 ARG STEAM_USERNAME
 ARG STEAM_PASSWORD

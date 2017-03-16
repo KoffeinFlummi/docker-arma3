@@ -1,8 +1,7 @@
 #!/bin/bash
 
-username=""
-password=""
-code=""
+echo -n "Branch to download ([l]egacy, [d]evelopment, [s]table): "
+read branch
 
 echo -n "Enter Steam username: "
 read username
@@ -12,4 +11,4 @@ echo
 echo -n "Enter Steam auth code: "
 read code
 
-STEAM_USERNAME=$username STEAM_PASSWORD=$password STEAM_AUTHCODE=$code docker-compose build
+BRANCH=$branch STEAM_USERNAME=$username STEAM_PASSWORD=$password STEAM_AUTHCODE=$code docker-compose build

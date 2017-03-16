@@ -6,6 +6,7 @@ services:
         build:
             context: .
             args:
+                - BRANCH
                 - STEAM_USERNAME
                 - STEAM_PASSWORD
                 - STEAM_AUTHCODE
